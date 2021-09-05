@@ -1,0 +1,238 @@
+/* ===== FONTS ==== */
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+/* ===== FONT PROPERTIES ===== */
+html {
+  font-size: 50%; /* 62.5% ==> 1rem = 10px */
+}
+
+:root {
+  --body-font-size: 2.4rem;
+  --label-font-size: 1.6rem;
+  --results-font-size: 3.6rem;
+  --sublabel-fontsize: 1.2rem;
+}
+
+/* ===== COLORS ===== */
+:root {
+  --strong-cyan: hsl(172, 67%, 45%);
+  --highlight-color: hsl(172, 81%, 67%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --dark-grayish-cyan2: hsl(184, 14%, 56%);
+  --body-background-color: hsl(185, 41%, 84%);
+  --light-grayish-cyan2: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* ==== BASE ==== */
+* {
+    
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  font-size: var(--body-font-size);
+  line-height: 1;
+  background-color: var(--body-background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+label {
+    display: block;
+}
+
+::placeholder {
+    color: var(--dark-grayish-cyan2);
+    font-weight: 600;
+    font-size: var(--body-font-size);
+}
+
+input[type="number"]:focus {
+    outline-color: var(--highlight-color);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* main style */
+
+.logo {
+    width: 8rem;
+    margin: 4rem 0;
+}
+
+.card {
+    background: var(--white);
+    padding: 3rem;
+    border-radius: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0 15px 32px -20px rgba(0, 0, 0, 0.5);
+    gap: 2rem;
+    max-width: 85rem;
+}
+
+.main-card {
+    width: 38rem;
+}
+
+.card--dark {
+    width: 38rem;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 1rem;
+    background-color: var(--very-dark-cyan);
+    box-shadow: none;
+}
+
+.card__label {
+    font-size: var(--label-font-size);
+    color: var(--dark-grayish-cyan);
+    font-weight: 600;
+    margin: 3rem 0 1rem 0;
+}
+
+.card__input-wrapper:first-child {
+    margin-top: -2rem;
+}
+  
+.card__label--light {
+    color: var(--white);
+}
+  
+.card__sublabel {
+    display: block;
+    font-size: var(--sublabel-fontsize);
+    color: var(--dark-grayish-cyan2);
+    margin: 0.75rem 0;
+}
+
+.card__input {
+
+    border: none;
+    background-color: var(--light-grayish-cyan2);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-align: right;
+    font-family: inherit;
+    color: var(--very-dark-cyan);
+    font-weight: 600;
+    font-size: var(--body-font-size);
+    width: 100%;
+}
+
+.card__input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.card__input-icon {
+  position: absolute;
+  left: 12px;
+  bottom: 10px;
+}
+
+.card__result-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__result-number {
+  color: var(--strong-cyan);
+  font-weight: 700;
+  font-size: var(--results-font-size);
+}
+
+.card__btn-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+}  
+
+.card__btn {
+  padding: 1rem 0;
+  width: 30%;
+  min-width: 12rem;
+  background-color: var(--very-dark-cyan);
+  color: var(--white);
+  font-weight: 700;
+  border-radius: 0.5rem;
+  border: none;
+  font-family: inherit;
+  font-size: var(--body-font-size);
+  cursor: pointer;
+}
+
+.card__btn:hover {
+  background-color: var(--strong-cyan);
+}
+
+.card__btn--active {
+  background-color: var(--strong-cyan);
+}
+
+.card__custom,
+.card__custom:hover,
+.card__custom:focus {
+  background-color: var(--light-grayish-cyan2);
+  color: var(--very-dark-cyan);
+  padding: 1rem;
+  font-size: inherit;
+  font-family: inherit;
+  text-align: center;
+  cursor: auto;
+}
+.card__custom--active {
+  background-color: var(--strong-cyan);
+  color: var(--white);
+}
+
+.card__custom::placeholder {
+  font-size: var(--body-font-size);
+  font-family: "Space Mono", monospace;
+}
+
+.card__reset-btn {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: var(--body-font-size);
+  font-weight: 700;
+  border: none;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border-radius: 0.5rem;
+  width: 100%;
+  color: var(--very-dark-cyan);
+  background-color: var(--strong-cyan);
+}
+
+.card__reset-btn:hover {
+  background-color: var(--highlight-color);
+}
