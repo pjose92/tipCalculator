@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
   
   <title>Tip Calculator App</title>
 
@@ -15,30 +16,81 @@
   </style>
 </head>
 <body>
+  <img class="logo" src="images/logo.svg" alt="splitter logo" />
+  <div class="card">
+    <ul class="main-card">
+      <div class="card__input-wrapper">
+        <label for="bill" class="card__label">Bill</label>
+        <input 
+          class="card__input" 
+          type="number"
+          name="bill" 
+          placeholder="0"
+          id="bill"
+        />
+        <img class="card__input-icon" src="images/icon-dollar.svg" alt="$" />
+      </div>
+      <p class="vard__label">Select Tip</p>
+      <div class="card__btn-grid">
+        <button class="card__btn">5%</button>
+        <button class="card__btn">10%</button>
+        <button class="card__btn">15%</button>
+        <button class="card__btn">25%</button>
+        <button class="card__btn">50%</button>
+          <input
+          class="card__btn card__custom "
+          type="number"
+          maxlength=2
+          name="custom"
+          id="custom"
+          placeholder="Custom"
+        />
+      </div>
+    </ul>
+    <div class="card__input-wrapper">
+      <lbael class="card__label">Number of Poeple</lbael>
+      <input
+        class="card__input"
+        type="number"
+        name="numberOfPeople"
+        id="numberOfPeople"
+        placeholder="0" 
+      />
+      <img
+        class="card__input-icon"
+        src="images/icon-person.svg"
+        alt="Person Icon" 
+      />
+    </div>
+  </div>
 
-  Bill
+  <div class="card card--dark">
+    <div class="card__results">
+      <div class="card__result-wrapper">
+        <p class="card__label card__label--light">
+          Tip Amount<span class="card__sublabel">/person</span>
+        </p>
+        <p class="card__result-number" id="tip-amount">$0.00</p>
+      </div>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+      <div class="card__result-wrapper">
+        <p class="card__label card__label--light">
+          Total<span class="card__sublabel">/ person</span>
+        </p>
+        <p class="card__result-number" id="total-amount">$0.00</p>
+      </div>
 
-  Number of People
+      <button class="card__reset-btn" id=reset>Rest</button>
+    </div>
+    </div>
+  </div>
+</div>
 
-  Tip Amount
-  / person
 
-  Total
-  / person
-
-  Reset
-  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  <script type="text/javascript" src="/index.js"; />
 </body>
 </html>
