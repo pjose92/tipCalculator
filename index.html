@@ -16,75 +16,77 @@
   </style>
 </head>
 <body>
-  <img class="logo" src="images/logo.svg" alt="splitter logo" />
-  <div class="card">
-    <ul class="main-card">
-      <div class="card__input-wrapper">
-        <label for="bill" class="card__label">Bill</label>
-        <input 
-          class="card__input" 
-          type="number"
-          name="bill" 
-          placeholder="0"
-          id="bill"
-        />
-        <img class="card__input-icon" src="images/icon-dollar.svg" alt="$" />
-      </div>
-      <p class="vard__label">Select Tip</p>
-      <div class="card__btn-grid">
-        <button class="card__btn">5%</button>
-        <button class="card__btn">10%</button>
-        <button class="card__btn">15%</button>
-        <button class="card__btn">25%</button>
-        <button class="card__btn">50%</button>
+    <img class="logo" src="images/logo.svg" alt="Splitter logo" />
+    <div class="card">
+      <div class="main-card">
+        <div class="card__input-wrapper">
+          <label for="bill" class="card__label">Bill</label>
           <input
-          class="card__btn card__custom "
-          type="number"
-          maxlength=2
-          name="custom"
-          id="custom"
-          placeholder="Custom"
-        />
+            class="card__input"
+            type="number"
+            name="bill"
+            id="bill"
+            placeholder="0"
+          />
+          <img class="card__input-icon" src="images/icon-dollar.svg" alt="$" />
+        </div>
+        <p class="card__label">Select Tip %</p>
+        <div class="card__btn-grid">
+           <button class="card__btn">5%</button>
+           <button class="card__btn">10%</button>
+           <button class="card__btn">15%</button>
+           <button class="card__btn">25%</button>
+           <button class="card__btn">50%</button>
+           
+            <input
+              class="card__btn card__custom "
+              type="number"
+              oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+              maxlength=2
+              name="custom"
+              id="custom"
+              placeholder="Custom"
+            />
+          </div>
+        </ul>
+        <div class="card__input-wrapper">
+          <label class="card__label" for="nbOfPpl">Number of People</label>
+          <input
+            class="card__input"
+            type="number"
+            name="nbOfPpl"
+            id="nbOfPpl"
+            placeholder="0"
+          />
+          <img
+            class="card__input-icon"
+            src="images/icon-person.svg"
+            alt="Person icon"
+          />
+        </div>
       </div>
-    </ul>
-    <div class="card__input-wrapper">
-      <lbael class="card__label">Number of Poeple</lbael>
-      <input
-        class="card__input"
-        type="number"
-        name="numberOfPeople"
-        id="numberOfPeople"
-        placeholder="0" 
-      />
-      <img
-        class="card__input-icon"
-        src="images/icon-person.svg"
-        alt="Person Icon" 
-      />
-    </div>
-  </div>
 
-  <div class="card card--dark">
-    <div class="card__results">
-      <div class="card__result-wrapper">
-        <p class="card__label card__label--light">
-          Tip Amount<span class="card__sublabel">/person</span>
-        </p>
-        <p class="card__result-number" id="tip-amount">$0.00</p>
+      <!-- dark card section -->
+      <div class="card card--dark">
+        <div class="card__results">
+          <div class="card__result-wrapper">
+            <p class="card__label card__label--light">
+              Tip Amount<span class="card__sublabel">/ person</span>
+            </p>
+            <p class="card__result-number" id="tip-amount">$0.00</p>
+          </div>
+
+          <div class="card__result-wrapper">
+            <p class="card__label card__label--light">
+              Total<span class="card__sublabel">/ person</span>
+            </p>
+            <p class="card__result-number" id="total-amount">$0.00</p>
+          </div>
+        </div>
+
+        <button class="card__reset-btn" id="reset">Reset</button>
       </div>
-
-      <div class="card__result-wrapper">
-        <p class="card__label card__label--light">
-          Total<span class="card__sublabel">/ person</span>
-        </p>
-        <p class="card__result-number" id="total-amount">$0.00</p>
-      </div>
-
-      <button class="card__reset-btn" id=reset>Rest</button>
     </div>
-    </div>
-  </div>
-</div>
 
 
   <div class="attribution">
